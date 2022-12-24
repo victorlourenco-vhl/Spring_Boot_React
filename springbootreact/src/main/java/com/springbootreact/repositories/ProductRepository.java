@@ -8,4 +8,5 @@ import com.springbootreact.domain.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer>{
 
+
 }

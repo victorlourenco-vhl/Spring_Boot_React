@@ -1,0 +1,40 @@
+package com.springbootreact.resources;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springbootreact.domain.Product;
+import com.springbootreact.services.ProductService;
+
+@RestController
+public class ProductResource {
+	
+	@Autowired
+	ProductService service;
+
+	@GetMapping("/test")
+	public String message() {
+		return "API funcionando";
+	}
+	
+	@GetMapping
+	public ResponseEntity<List<Product>> list(){
+		return ResponseEntity.ok().body(service.list());
+	}
+	
+	@PostMapping
+	public ResponseEntity<Void> addProduct(Product obj) {
+		service.addProduct(obj);
+		return ResponseEntity.ok().build();
+	}
+	
+	
+	
+	
+}
