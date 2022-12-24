@@ -1,0 +1,6 @@
+package com.springbootreact.services;
+
+@Service
+public class ProductService {
+
+}
