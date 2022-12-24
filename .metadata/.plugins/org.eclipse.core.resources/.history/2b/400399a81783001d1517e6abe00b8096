@@ -1,0 +1,5 @@
+package com.springbootreact.domain;
+
+public class Product {
+
+}
