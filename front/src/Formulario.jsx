@@ -1,4 +1,4 @@
-export function Formulario({ botao, eventoTeclado, cadastrar, obj }) {
+export function Formulario({ botao, eventoTeclado, cadastrar, obj, cancelar }) {
   return (
     <form>
       <input type="text" value={obj.name} onChange={eventoTeclado} name="name" placeholder="Nome" className="form-control" />
@@ -9,7 +9,7 @@ export function Formulario({ botao, eventoTeclado, cadastrar, obj }) {
         <div>
           <input type="button" value="Alterar" className="btn btn-warning" />
           <input type="button" value="Remover" className="btn btn-danger" />
-          <input type="button" value="Cancelar" className="btn btn-secondary" />
+          <input type="button" value="Cancelar" className="btn btn-secondary" onClick={cancelar}/>
         </div>
       )}
     </form>

@@ -46,6 +46,7 @@ function App() {
 
   const limparFormulario = () => {
     setObjProduct(product);
+    setBtnCadastrar(true);
   }
 
   //Selecionar produto
@@ -58,7 +59,7 @@ function App() {
     <div>
       <p>{JSON.stringify(objProduct)}</p>
 
-      <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} cadastrar={cadastrar} obj={products}/>
+      <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} cadastrar={cadastrar} obj={products} cancelar={limparFormulario}/>
       <Tabela vetor={products} selecionar={selecionarProduto}/>
     </div>
   );
