@@ -1,0 +1,5 @@
+package com.springbootreact.config;
+
+public class CorsConfiguration {
+
+}
